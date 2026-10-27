@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="app-container">
+    <h1 class="app-title">Simple Calculator</h1>
+
+    <div class="calculator-card">
+      <!-- Digital Display Screen -->
+      <section class="display" aria-label="Calculator Screen">
+        <div class="previous-operand" id="previous-operand" aria-live="polite"></div>
+        <div class="current-operand" id="current-operand" aria-live="assertive">0</div>
+      </section>
+
+      <!-- Calculator Buttons Grid -->
+      <section class="buttons-grid" aria-label="Calculator keypad">
+        <!-- Row 1: Clear, Delete, Divide -->
+        <button type="button" class="btn btn-clear span-two" data-action="clear" aria-label="Clear all">C</button>
+        <button type="button" class="btn btn-delete" data-action="delete" aria-label="Delete last digit">DEL</button>
+        <button type="button" class="btn btn-operator" data-operator="÷" aria-label="Divide">÷</button>
+
+        <!-- Row 2: 7, 8, 9, Multiply -->
+        <button type="button" class="btn btn-number" data-number="7">7</button>
+        <button type="button" class="btn btn-number" data-number="8">8</button>
+        <button type="button" class="btn btn-number" data-number="9">9</button>
+        <button type="button" class="btn btn-operator" data-operator="×" aria-label="Multiply">×</button>
+
+        <!-- Row 3: 4, 5, 6, Subtract -->
+        <button type="button" class="btn btn-number" data-number="4">4</button>
+        <button type="button" class="btn btn-number" data-number="5">5</button>
+        <button type="button" class="btn btn-number" data-number="6">6</button>
+        <button type="button" class="btn btn-operator" data-operator="−" aria-label="Subtract">−</button>
+
+        <!-- Row 4: 1, 2, 3, Add -->
+        <button type="button" class="btn btn-number" data-number="1">1</button>
+        <button type="button" class="btn btn-number" data-number="2">2</button>
+        <button type="button" class="btn btn-number" data-number="3">3</button>
+        <button type="button" class="btn btn-operator" data-operator="+" aria-label="Add">+</button>
+
+        <!-- Row 5: 0, Decimal Point, Equals -->
+        <button type="button" class="btn btn-number span-two" data-number="0">0</button>
+        <button type="button" class="btn btn-number" data-number=".">.</button>
+        <button type="button" class="btn btn-equals" data-action="equals" aria-label="Equals">=</button>
+      </section>
+    </div>
+
+    <!-- Keyboard Shortcuts Guide -->
+    <div class="keyboard-guide">
+      <span class="guide-item"><kbd>Esc</kbd> Clear</span>
+      <span class="guide-item"><kbd>⌫ Backspace</kbd> Delete</span>
+      <span class="guide-item"><kbd>Enter</kbd> / <kbd>=</kbd> Equals</span>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
